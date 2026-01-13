@@ -42,8 +42,14 @@ game_running = True
 
 # keep the game running
 while game_running:
+   
+# menu for the player to start the game
+   print("\n Welcome to the Guessing Game! Try to guess the secret item.\n ")
+   print(input("You can ask for hints by typing '?' at the end of your input. (Enter to continue)"))
+
+
    # ask the player to guess or ask a question
-   prompt = input("Type a guess or ask a question (end with '?'): ").strip().lower()
+   prompt = input("\n Type a guess or ask a hint('?'): ").strip().lower()
    
    # check if the guess is correct
    if prompt == secret_item:
