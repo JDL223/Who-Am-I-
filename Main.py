@@ -1,4 +1,5 @@
 import random
+import os
 
 # make a dictionary and add a secret item and each item will have a hint
 secrets = {
@@ -26,7 +27,8 @@ secrets = {
 # another dictionary people can add to
 community_secrets = {
    "soccer": ["sport", "ball", "goal"],
-   "guitar": ["instrument", "strings", "music"]
+   "guitar": ["instrument", "strings", "music"],
+   "mouse" : ["animal", "small", "squeeks"]
 }
 
 # merge the second dictionary into the main secrets dictionary
@@ -64,6 +66,7 @@ while game_running:
            print("No more hints. The answer was", secret_item)
            play_again = input("Play again? (yes/no)").strip().lower()
            if play_again == "yes":
+               os.system('cls || clear')
                secret_item, secret_hints = random.choice(list(secrets.items()))
                current_hints = secret_hints
                hints_used = 0
